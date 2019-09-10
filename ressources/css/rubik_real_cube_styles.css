@@ -1,0 +1,189 @@
+div#laScene {
+    border-radius: 10px;
+    /* width: 70vw; */
+    height: 750px;
+    /* padding: 150px; */
+    margin: 0 auto;
+    perspective: 2000px;
+    /* border: 2px solid rgba(168, 7, 7, 0.425); */
+    background-color: rgba(0, 0, 0, 0);
+    /* background-image: url("../patterns/what-the-hex-dark.png"); */
+    /* overflow: hidden; */
+    /* display: flex; */
+    /* justify-content: center; */
+    display: flex;
+    flex-flow: row nowrap;
+    cursor: url(../cursors/rubik.png) 1 1, pointer;
+}
+
+ul.them-links {
+    height: 100vh;
+    position: absolute;
+    top: -10em;
+    left: 0;
+    /* margin-left: 3em; */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+ul.them-links:hover {
+    /* cursor: url(../cursors/Cube.cur), pointer; */
+}
+ul.them-links li {
+    z-index: 10;
+    transition: .5s;
+    min-width: 10em;
+    text-align: center;
+    list-style-type: none;
+    padding: 2rem 2rem;
+    box-shadow: 2px 2px 2px black;
+    /* margin-top: .5rem; */
+    margin: .2rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    /* cursor: pointer; */
+    font-size: 1.5em;
+    letter-spacing: .1em;
+    color: #5a80c7;
+    border-radius: .2em;
+    background-color: #111;
+}
+ul.them-links li:hover {
+    transition: .2s;
+    background-color: #5a80c7;
+    color: #111;
+}
+/* ==========================================
+Animation cube with guys-links :hover
+========================================== */
+
+
+
+div#leCube {
+    border-radius: 10px;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    top: 120px;
+    transform-style: preserve-3d;
+    /* transform-origin: center; */
+    /* transform: rotateX(0deg) rotateY(0deg); */
+    /* transform: rotate3d(1, 1, 0, -18deg); */
+    transform: translateZ(450px);
+    transition: 1s;
+    margin: 2em auto;
+}
+
+
+/* ==================================
+LES 6 FACES */
+div#leCube>div {
+    border: 5px solid #555;
+    transition: 1s;
+    border-radius: 5px;
+    /* border: 10px solid red; */
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    /* backface-visibility: hidden; */
+    /* padding: 6px; */
+    /* background-color: rgba(255, 255, 255, .1); */
+}
+div#laScene:hover div#leCube {
+    /* transform-origin: center; */
+    /* transform: rotateX(-18deg) rotateY(-18deg); */
+    transform: rotate3d(1, 1, 0, -18deg);
+    /* =====================================
+    ICI ANIM INFINITE ?
+    ===================================== */
+}
+
+div#face_avant {
+    transition: 1s;
+    transform: rotateY(0deg) translateZ(200px);
+    /* background: black url("../Bibi/come2.png") no-repeat center center; */
+    /* background-size: cover; */
+    color: #ddd;
+}
+div#face_avant:hover {
+    cursor: url(../cursors/beer.png), pointer;
+}
+.bibi {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    /* background-color: rgba(212, 107, 8, 0.7); */
+    background: linear-gradient(to bottom right, rgba(145, 2, 2, 0.9), rgba(6, 45, 102, 0.9));
+    /* background: url("../devon/devon1.png"); */
+    /* opacity: .5; */
+    font-size: 1.5em;
+    line-height: 2em;
+    padding: 1em;
+    /* color: white; */
+}
+
+ 
+
+/* =========================================
+PLACEMENTS FACES + IMAGES
+========================================= */
+
+div#face_arriere {
+    transform: rotateY(180deg) translateZ(200px);
+}
+.mathieu {
+    background: black url("../mathieu/mathieu.png") no-repeat center center;
+    background-size: cover;
+}
+.mathieu:hover {
+    cursor: url(../cursors/gremlin.png), pointer;
+}
+
+
+div#face_gauche {
+    transform: rotateY(-90deg) translateZ(200px);
+}
+.devon {
+    background: black url("../devon/devon1.png") no-repeat center center;
+    background-size: cover;
+}
+.devon:hover {
+    cursor: url(../cursors/sonic.png), pointer;
+}
+
+
+div#face_droite {
+    transform: rotateY(90deg) translateZ(200px);
+}
+.cecile {
+    background: black url("../cecile/cecile2.png") no-repeat center center;
+    background-size: cover;
+}
+.cecile:hover {
+    cursor: url(../cursors/pinocchio.png), pointer;
+}
+
+
+div#face_haut {
+    transform: rotateX(90deg) translateZ(200px);
+}
+.morghan {
+    background: black url("../morghan/morghan.png") no-repeat top center;
+    background-size: cover;
+}
+.morghan:hover {
+    cursor: url(../cursors/linux.png), pointer;
+}
+
+
+div#face_bas {
+    transform: rotateX(-90deg) translateZ(200px);
+}
+.joyce {
+    background: black url("../joyce/joyce.png") no-repeat top center;
+    background-size: cover;
+}
+.joyce:hover {
+    cursor: url(../cursors/plane.png), pointer;
+}
