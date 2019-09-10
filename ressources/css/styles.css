@@ -1,0 +1,148 @@
+@font-face {
+    font-family: "aguafina regular";
+    src: url("../fonts/AguafinaScript-Regular.ttf") format("opentype");
+}
+@font-face {
+    font-family: "ubuntu title";
+    /* src: url("fonts/ubuntu-title.ttf") format("opentype"); */
+    src: url("../fonts/ubuntu-title-fr-1.1.ttf") format("opentype");
+}
+@font-face {
+    font-family: "ubuntu light";
+    src: url("../fonts/Ubuntu-L.ttf") format("opentype");
+}
+@font-face {
+    font-family: "ubuntu regular";
+    src: url("../fonts/Ubuntu-R.ttf") format("opentype");
+}
+@font-face {
+    font-family: great-vibes;
+    src: url("../fonts/GreatVibes-Regular.otf");
+}
+body, nav, div, p, h1, h2, h3, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+
+}
+body {
+    font-family: "ubuntu regular", sans-serif, serif;
+    /* background-color: #ddd; */
+    color: #000;
+    background: linear-gradient(to bottom right, rgba(26, 42, 108, 0.507), rgba(178, 31, 31, 0.651), rgba(253, 187, 45, 0.664)), url("../patterns/qbkls.png");
+}
+
+h1 {
+    position: relative;
+    letter-spacing: .3rem;
+    margin-top: 1rem;
+    padding: 0;
+    font: small-caps 3em "aguafina regular", "ubuntu title", sans-serif, serif;
+    text-align: center;
+    color: #ddd;
+    text-shadow: 1px 1px 1px #111, -1px 1px 1px #111, 1px -1px 1px #111, -1px -1px 1px #111;
+}
+h1::first-letter {
+    font: bold 1.5em great-vibes, serif;
+    margin-right: .1em;
+    text-shadow: 1px 1px 1px #111, -1px 1px 1px #111, 1px -1px 1px #111, -1px -1px 1px #111, 4px 4px 4px #114e94;
+}
+h2 {
+    font: 2em "ubuntu light", sans-serif, serif;
+    letter-spacing: 2px;
+    text-indent: 20%;
+    margin: 0 0 1em 0;
+    padding: 0;
+    animation: letterSpacingH2 ease-in-out 5s infinite;
+    text-shadow: 2px 2px 2px black;
+}
+nav#accueil {
+    padding-left: 2%;
+    width: 60%;
+    margin: 0 auto;
+}
+nav#accueil>div.homeLinks {
+    transition: 1s;
+    position: relative;
+    font-size: 1.2em;
+    display: inline-block;
+    overflow: hidden;
+    width: 46%;
+    min-height: 20em;
+    margin: 1%;
+    text-decoration: none;
+    text-align: center;
+    background-color: #050505;
+    border: 3px solid #680404;
+    color: #11a85d;
+    border-radius: 1em;
+    cursor: pointer;
+}
+nav#accueil p.homeLinksDescription {
+    position: absolute;
+    top: 7em;
+    line-height: 1.7em;
+    text-align: left;
+    color: #78ca91;
+    padding: .5em .5em .5em 1em;
+}
+nav#accueil>div.homeLinks:hover {
+    transition: .2s;
+    background-color: #112;
+    color: #ddd;
+}
+nav#return_home>a {
+    display: inline-block;
+    position: fixed;
+    z-index: 100;
+    top: 1em;
+    left: 1em;
+    transition: .5s;
+    padding: .5em;
+    font-size: 1.2em;
+    letter-spacing: .1em;
+    text-decoration: none;
+    color: #5a80c7;
+    border-radius: .2em;
+    background-color: #222;
+}
+nav#return_home>a:hover {
+    transition: .2s;
+    background-color: #5a80c7;
+    color: #222;
+}
+h1>span.spanArinfo {
+    font: bold .7em "ubuntu regular";
+    letter-spacing: .1em;
+}
+@keyframes letterSpacingH2 {
+    0% {
+        letter-spacing: 2px;
+        color: #000;
+    }
+    50% {
+        letter-spacing: 2px;
+        color: #000;
+    }
+    65% {
+        letter-spacing: 2px;
+        color: rgb(61, 0, 131);
+        text-shadow: 2px 2px 2px rgb(61, 0, 131);
+    }
+    80% {
+        letter-spacing: 5px;
+        color: rgba(0, 0, 0, 0);
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0);
+    }
+    90% {
+        color: rgba(0, 0, 0, 0);
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0);
+    }
+    100% {
+        letter-spacing: 2px;
+        color: #000;
+    }
+}
