@@ -7,4 +7,5 @@ Collaborateur mohamed
 willy est tu la ?
 oui ou non ?
 
-non il est pas la 
+non il est pas la
+second essai 13/09 avec bash 
